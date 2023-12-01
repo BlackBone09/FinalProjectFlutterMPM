@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:http/http.dart' as http;
+import 'config.dart';
 import 'image_display_page.dart'; // Import the ImageDisplayPage
 
 class AnimePage extends StatefulWidget {
@@ -10,7 +11,7 @@ class AnimePage extends StatefulWidget {
 }
 
 class _AnimePageState extends State<AnimePage> {
-  final apiKey = '53d8aaf4f3mshf9cf8a80d52ea84p182cd8jsnd76d10ae34bf';
+  final apiKey = Config.rapidApiKey;
   final apiUrl = 'https://any-anime.p.rapidapi.com/v1/anime/png/5/';
 
   List<String> imageUrls = [];
