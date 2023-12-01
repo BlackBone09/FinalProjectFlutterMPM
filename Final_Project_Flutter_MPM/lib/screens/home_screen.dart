@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'anime_page.dart'; // Import the AnimePage class
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -49,9 +50,26 @@ class HomeScreen extends StatelessWidget {
                 Navigator.pushNamed(context, '/gallery');
               },
             ),
+            ListTile(
+              leading: Icon(Icons.image),
+              title: Text('Anime Page'), // Add this new menu item
+              onTap: () {
+                Navigator.pop(context); // Close the drawer
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AnimePage()), // Navigate to AnimePage
+                );
+              },
+            ),
           ],
         ),
       ),
     );
   }
+}
+
+void main() {
+  runApp(MaterialApp(
+    home: HomeScreen(),
+  ));
 }
