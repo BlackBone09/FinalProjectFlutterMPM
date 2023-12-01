@@ -4,6 +4,8 @@ import 'screens/contact_provider.dart'; // Import ContactProvider
 import 'screens/contact_list_screen.dart'; // Import the ContactListScreen
 import 'screens/home_screen.dart'; // Import the HomeScreen
 import 'screens/gallery_screen.dart'; // Import the GalleryScreen
+import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 void main() {
   runApp(
